@@ -13,7 +13,6 @@ import "./IOracle.sol";
 *           the executor has the exclusive right to execute requests
 *           in the Registry contract. The Registry checks with StakeManager
 *           who is allowed to execute requests at any given time
-* @author   Quantaf1re (James Key)
 */
 interface IStakeManager {
 
@@ -28,7 +27,7 @@ interface IStakeManager {
     //                          Getters                         //
     //                                                          //
     //////////////////////////////////////////////////////////////
-    
+
     function getOracle() external view returns (IOracle);
 
     function getAUTOAddr() external view returns (address);

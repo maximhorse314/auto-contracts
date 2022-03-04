@@ -9,7 +9,6 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 * @title    AUTO contract
 * @notice   The AUTO utility token which is used to stake in Autonomy and pay for
 *           execution fees with
-* @author   Quantaf1re (James Key)
 */
 contract AUTO is ERC777, Ownable {
 

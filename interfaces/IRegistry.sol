@@ -17,10 +17,9 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 *           staking AUTO tokens. This is infrastructure, and an integral
 *           piece of the future of web3. It also provides the spark of life
 *           for a new form of organism - cyber life. We are the gods now.
-* @author   Quantaf1re (James Key)
 */
 interface IRegistry {
-    
+
     // The address vars are 20b, total 60, calldata is 4b + n*32b usually, which
     // has a factor of 32. uint112 since the current ETH supply of ~115m can fit
     // into that and it's the highest such that 2 * uint112 + 3 * bool is < 256b
@@ -146,7 +145,7 @@ interface IRegistry {
      * @return  [uint] The total number of hashed requests
      */
     function getHashedReqsLen() external view returns (uint);
-    
+
     /**
      * @notice      Gets a single hashed request
      * @param id    [uint] The id of the request, which is its index in the array
@@ -203,7 +202,7 @@ interface IRegistry {
     //                        Cancellations                     //
     //                                                          //
     //////////////////////////////////////////////////////////////
-    
+
     /**
      * @notice      Execute a hashedReq. Calls the `target` with `callData`, then
      *              charges the user the fee, and gives it to the executor
@@ -215,29 +214,29 @@ interface IRegistry {
         uint id,
         Request memory r
     ) external;
-    
-    
+
+
     //////////////////////////////////////////////////////////////
     //                                                          //
     //                          Getters                         //
     //                                                          //
     //////////////////////////////////////////////////////////////
-    
+
     function getAUTOAddr() external view returns (address);
-    
+
     function getStakeManager() external view returns (address);
 
     function getOracle() external view returns (address);
-    
+
     function getUserForwarder() external view returns (address);
-    
+
     function getGasForwarder() external view returns (address);
-    
+
     function getUserGasForwarder() external view returns (address);
-    
+
     function getReqCountOf(address addr) external view returns (uint);
-    
+
     function getExecCountOf(address addr) external view returns (uint);
-    
+
     function getReferalCountOf(address addr) external view returns (uint);
 }
