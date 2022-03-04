@@ -4,9 +4,9 @@ from brownie import reverts, chain
 from brownie.test import given, strategy
 
 
-def test_initial_state(auto):
-    checkAreCallers(auto.ff, a[:] + [auto.AUTO, auto.po, auto.o, auto.sm, auto.uf, auto.ff, auto.uff, auto.r, auto.m, auto.tl], [auto.r])
-    assert auto.ff.owner() == auto.tl
+# def test_initial_state(auto):
+#     checkAreCallers(auto.ff, a[:] + [auto.AUTO, auto.po, auto.o, auto.sm, auto.uf, auto.ff, auto.uff, auto.r, auto.m, auto.tl], [auto.r])
+#     assert auto.ff.owner() == auto.tl
 
 
 @given(newCaller=strategy('address'), b=strategy('bool'))
